@@ -4,7 +4,11 @@
   --font-color: #fff;
   --color-main: #303030;
   --color-secondary: #404040;
-  --color-active: #375a7f;
+  --number-btn: #c4c5c9;
+  --number-btn-active: #bfc0c2;
+  --operator-btn: #f98d11;
+  --operator-btn-active: #e17c10;
+  --general-padding: 1rem;
 }
 
 html {
@@ -24,49 +28,122 @@ html {
   padding: 0;
 }
 
-#root {
-  margin: 1.5rem;
-}
-
-#drum-machine{
-	margin: 0 auto;
-	max-width: 50%;
-	background-color: var(--color-secondary);
-	display: grid;
-	grid-template-columns: 50% 50%;
-	grid-template-rows: auto;
-}
-
-#machine-display{
+.app{
+	height: 100vh;
 	display: flex;
-	text-align: center;
 	align-items: center;
-	order: 2;
-	margin: .5rem;
+	justify-content: center;
 }
 
-#machine-display>*{
-	width: 100%;
-	background-color: var(--color-main)
-}
-
-#machine-controls{
-	margin: .5rem;
-	display: grid;
-	grid-template-columns: auto auto auto;
-	grid-template-rows: auto;
-	order: 1;
-	justify-content: space-evenly;
-}
-
-.drum-pad{
-	padding: 2rem;
-	margin: .5rem;
+#display{
 	text-align: center;
-	background-color: var(--color-main);
+	background-color: var(--color-secondary);
+	padding: var(--general-padding);
+	font-size: 1.5rem;
 }
 
-.drum-pad:hover{
-	background-color: var(--color-active);
-	font-weight: bold;
+#calc{
+	width: 50%;
+}
+
+#pad{
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	grid-template-areas: 
+		"clear clear clear divs"
+		"seven eight nine mults"
+		"four five six subs"
+		"one two three adds"
+		"zero zero decimal equal";
+}
+
+#zero{
+	grid-area: zero;
+}
+
+#one{
+	grid-area: one;
+}
+
+#two{
+	grid-area: two;
+}
+
+#three{
+	grid-area: three;
+}
+
+#four{
+	grid-area: four;
+}
+
+#five{
+	grid-area: five;
+}
+
+#six{
+	grid-area: six;
+}
+
+#seven{
+	grid-area: seven;
+}
+
+#eight{
+	grid-area: eight;
+}
+
+#nine{
+	grid-area: nine;
+}
+
+#add{
+	grid-area: adds;
+}
+
+#substract{
+	grid-area: subs;
+}
+
+#multiply{
+	grid-area: mults;
+}
+
+#divide{
+	grid-area: divs;
+}
+
+#decimal{
+	grid-area: decimal;
+}
+
+#clear{
+	grid-area: clear;
+}
+
+#equal{
+	grid-area: equal;
+}
+
+button{
+	padding: var(--general-padding);
+	border: 1px solid var(--color-main);
+	font-size: 1.5rem;
+}
+
+.number{
+	background-color: var(--number-btn);
+}
+
+.number:hover{
+	background-color: var(--number-btn-active);
+}
+
+.operator{
+	background-color: var(--operator-btn);
+	color: var(--font-color);
+}
+
+.operator:hover{
+	background-color: var(--operator-btn-active);
 }
