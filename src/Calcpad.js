@@ -4,7 +4,6 @@ class Calcpad extends React.Component{
 	render(){
 		return (
 			<div id="pad">
-				<button id="equals" className="operator">=</button>
       	<button id="zero" className="number">0</button>
       	<button id="one" className="number">1</button>
       	<button id="two" className="number">2</button>
@@ -15,11 +14,12 @@ class Calcpad extends React.Component{
       	<button id="seven" className="number">7</button>
       	<button id="eight" className="number">8</button>
       	<button id="nine" className="number">9</button>
+      	<button id="decimal" className="number">.</button>
       	<button id="add" className="operator">+</button>
       	<button id="substract" className="operator">-</button>
       	<button id="multiply" className="operator">*</button>
       	<button id="divide" className="operator">/</button>
-      	<button id="decimal" className="operator">.</button>
+      	<button id="equals" className="operator">=</button>
       	<button id="clear" className="operator">Clear</button>
 			</div>
 		);
