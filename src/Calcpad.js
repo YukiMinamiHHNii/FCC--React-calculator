@@ -23,7 +23,7 @@ class Calcpad extends React.Component{
       	<button id="nine" className="number" value="9" onClick={this.queueOnClick}>9</button>
       	<button id="decimal" className="number" value="." onClick={this.queueOnClick}>.</button>
       	<button id="add" className="operator" value="+" onClick={this.queueOnClick}>+</button>
-      	<button id="substract" className="operator" value="-" onClick={this.queueOnClick}>-</button>
+      	<button id="subtract" className="operator" value="-" onClick={this.queueOnClick}>-</button>
       	<button id="multiply" className="operator" value="*" onClick={this.queueOnClick}>*</button>
       	<button id="divide" className="operator" value="/" onClick={this.queueOnClick}>/</button>
       	<button id="equals" className="operator" value="=" onClick={this.props.calculate}>=</button>
